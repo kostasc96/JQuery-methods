@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<meta charset = "UTF-8">
+<title>Home Page</title>
+
+ <style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #428ff4;
+		border: 2px solid black;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		padding: 10px 11px;
+		text-decoration: none;
+	}
+
+	li {
+		text-align: center;
+		border-bottom: 1px solid black;
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+
+	li a.active {
+		background-color: #03a6eb;
+		color: white;
+	}
+
+	li a:hover:not(.active) {
+		background-color: grey;
+		color: white;
+	}
+</style>
+
+</head>
+
+<body>
+	<h2>Home Page</h2>
+	<p>Press one of the following buttons to direct in the page you want: <br><br> Page 1: Hover Event, Resizable Content, Fade Event Slide Event <br> Page 2: Before and After Methods, Remove and Empty Methods
+	<br>Page 3: Ajax Method</p>
+
+	<ul>
+		<li><a class="active" href="page1.html">Page 1</a></li>
+		<li><a href="page2.html">Page 2</a></li>
+		<li><a href="page3.html">Page 3</a></li>
+	</ul>
+</body>
+
+</html>

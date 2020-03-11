@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<meta charset = "UTF-8">
+<title>Page 2</title>
+
+ <style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #428ff4;
+		border: 2px solid black;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		padding: 10px 11px;
+		text-decoration: none;
+	}
+
+	li {
+		text-align: center;
+		border-bottom: 1px solid black;
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+
+	li a.active {
+		background-color: #03a6eb;
+		color: white;
+	}
+
+	li a:hover:not(.active) {
+		background-color: grey;
+		color: white;
+	}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $("#befaft").before('<img src="images/mm8.gif"/>');
+    });
+
+    $("#button2").click(function(){
+        $("#befaft").after('<img src="images/mm8.gif"/>');
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#button3").click(function(){
+        $("#removeempty").remove();
+    });
+
+    $("#button4").click(function(){
+        $("#removeempty").empty();
+    });
+});
+</script>
+
+</head>
+
+<body>
+	<h2>Page 2</h2>
+	<br><br>
+	
+	<h3>1)Before and After Methods</h3>
+	<div  id="befaft" style="width:100%; height:100px; background-image: url(images/space.jpg);">
+	</div>
+	<br>
+	<button id="button1">before</button>
+	<button id="button2">after</button>
+	<br>
+	
+	<h3>2)Remove and Empty Methods</h3>
+	<div  id="removeempty" style="width:100%; height:100px; background-image: url(images/space.jpg);">
+		<img width="100" height="100" src="images/earth.png"/>
+		<img width="100" height="100" src="images/earth.png"/>
+		<img width="100" height="100" src="images/earth.png"/>
+	</div>
+	<br>
+	<button id="button3">remove</button>
+	<button id="button4">empty</button>
+
+	<br>
+	<p>Press one of the following buttons to direct in the page you want:</p>
+		<br>
+		<ul>
+			<li><a class="active" href="index.html">Home Page</a></li>
+			<li><a href="page1.html">Page 1</a></li>
+			<li><a href="page3.html">Page 3</a></li>
+		</ul>
+</body>
+
+</html>

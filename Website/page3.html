@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<meta charset = "UTF-8">
+<title>Page 3</title>
+
+ <style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #428ff4;
+		border: 2px solid black;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		padding: 10px 11px;
+		text-decoration: none;
+	}
+
+	li {
+		text-align: center;
+		border-bottom: 1px solid black;
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+
+	li a.active {
+		background-color: #03a6eb;
+		color: white;
+	}
+
+	li a:hover:not(.active) {
+		background-color: grey;
+		color: white;
+	}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $.ajax({url: "mytext.txt", success: function(result){
+            $("#ajaxm").html(result);
+        }});
+    });
+});
+</script>
+
+</head>
+
+<body>
+	<h2>Page 3</h2>
+	<br><br>
+
+	<h3>1)Ajax Method</h3>
+	<div id="ajaxm">
+		<p style="color:green;"></p>
+	</div>
+	<button id="button1">Content</button>
+	
+
+	<br>
+	<p>Press one of the following buttons to direct in the page you want:</p>
+		<br>
+		<ul>
+			<li><a class="active" href="index.html">Home Page</a></li>
+			<li><a href="page1.html">Page 1</a></li>
+			<li><a href="page2.html">Page 2</a></li>
+		</ul>
+</body>
+
+</html>
